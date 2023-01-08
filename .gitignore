@@ -1,15 +1,9 @@
-﻿Saved/Config/CrashReportClient
-Saved/Crashes
-Saved/Logs
-Saved/WorldPartition
-Saved/AutoScreenshot.png
-Saved/webcache_4147
+﻿Content/Weapon_Pack
+Content/GothicTemple
 
-Intermediate/CachedAssetRegistry.bin
-Saved/Temp
-Saved/StagedBuilds
-Saved/Cooked
-Content/GothicTemple
-Saved/Autosaves/Game/GothicTemple
-Content/Weapon_Pack
-Content/GothicTemple
+Intermediate
+.vs
+Build
+Saved
+Plugins/*/Intermediate
+
