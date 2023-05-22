@@ -1,4 +1,5 @@
-ame: Build
+
+name: Build
 
 on:
   # Allow users to trigger workflow manually via GitHub UI
