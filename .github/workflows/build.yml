@@ -24,13 +24,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  start-agents:
-    needs: [ avoid-concurrent-invocations ]
-    name: "Start build agents"
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl ${{ secrets.WATCHDOG_TRIGGER_URL }}
-
   build-win64:
     needs: [ avoid-concurrent-invocations ]
     name: "Build for Win64"
@@ -78,11 +71,3 @@ jobs:
         with:
           name: automationtool-logs
           path: ${{ steps.find_build_logs.outputs.automationtool_logs_location }}
-
-  stop-agents:
-    needs: [ build-win64 ]
-    name: "Stop build agents"
-    if: ${{ always() }}
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl ${{ secrets.WATCHDOG_TRIGGER_URL }}
